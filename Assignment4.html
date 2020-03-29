@@ -1,0 +1,135 @@
+<html>
+<head>
+  <center>
+  <fieldset>
+  <script>
+  function ValidateEmail(inputText)
+{
+	var x = document.getElementById('email');
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(x.value.match(mailformat))
+	{
+		alert('Email validated successfully...');
+	return true;
+	}
+	else
+	{
+	alert("You have entered an invalid email address!");
+	return false;
+	}
+}
+  function form()
+  { 
+     var firstname=document.forms["regform"]["name"];
+     var  middlename=document.forms["regform"]["middlename"];
+     var lastname=document.forms["regform"]["lastname"];
+     var phoneno=document.forms["regform"]["no."];
+     var emailid=document.forms["regform"]["emailid"]; 
+	 
+	 if (firstname.value == "")
+	 {
+	   window.alert("enter firstname again")
+	    firstname.focus();
+		return false;
+		}
+		 if (middlename.value == "")
+	 {
+	   window.alert("enter middlename again")
+	     middlename.focus();
+		return false;
+		}
+	    if (lastname.value == "")
+	 {
+	   window.alert("enter lastname  again")
+	    lastname.focus();
+		return false;
+		}
+	    if (phoneno.value=="")
+	 {
+	   window.alert("enter phone no again")
+	    phoneno.focus();
+		return false;
+		}
+	    if (emailid.value=="")
+	 {
+	   window.alert("enter email no again")
+	    emailid.focus();
+		return false;
+		}
+	   o
+	 return true;
+  } </script>
+  <style>
+   body{
+   
+    background-color:skyblue;
+   
+   }
+   
+  
+  </style>
+      <h1 style="text-align:center"> Registration Form </h1>
+  </head>
+  
+<body>
+  
+  <hr>
+<form name="regform" action="#" onsubmit="return form()" method="post">
+  <table align="center" cellpadding:"10">
+<tr>
+<td>First name:</td>
+  <td><input type="text" placeholder="name" name="name"></td>
+  </tr>
+  
+<tr>
+<td>Middle name:</td>
+ <td><input type="text" placeholder="Middlename" name="middlename"></td>
+ </tr>
+ 
+ 
+ 
+<tr>
+<td>Last name:</td>
+ <td><input type="text" placeholder="last name" name="lastname"></td>
+ </tr>
+ 
+ 
+ 
+ <tr>
+ <td>Phone no:</td>
+<td><input type="number" placeholder="no." name="no."></td>
+</tr>
+ 
+<tr>
+<td>Email id:</td>
+<td><input type="email" placeholder="email id" name="emailid" onblur="ValidateEmail()" id="email"></td>
+</tr>
+</table>
+<br>
+<label>Hobbies :- </label>
+		<input type="checkbox" value="male" checked>Singing</input><br/><br/>
+		<input type="checkbox" value="female">Writing</input><br/><br/>
+		<input type="checkbox" value="other">dancing</input><br/><br/>
+		<input type="checkbox" value="other">writing</input><br/><br/>
+		<input type="checkbox" value="other">other</input><br/><br/>
+		<label>Your city name :- </label>
+		<select size="1">
+			<option value="Anand">Anand </option>
+			<option value="Nadiad"> Nadiad </option>
+			<option value="Vadodara"> Vadodara </option>
+			<option value="Surat">Surat</option>
+		</select><br>
+		<br>
+		Your Birthdate :- <input type="datetime-local"></input><br/><br/>
+
+	
+  <p><input type="submit" value="send" name="Submit">      
+     <input type="reset" value="Reset" name="Reset">   
+    </p> 
+</form>
+<hr>
+</body>
+</fieldset>
+</center>
+  </html>
+  
